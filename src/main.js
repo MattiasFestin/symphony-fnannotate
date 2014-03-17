@@ -26,8 +26,8 @@ var getFnArgs = function ($inject, fn) {
 	}
 };
 
-//TODO add generic interface for function
-var annotate = function annotate(fn) {
+
+module.exports = function annotate(fn) {
 	var $inject = fn.$inject;
 
 	if (typeof fn === 'function' && !fn.$inject) {
@@ -47,5 +47,3 @@ var annotate = function annotate(fn) {
 	fn.$inject = $inject;
 	return $inject;
 };
-
-module.exports = annotate;
