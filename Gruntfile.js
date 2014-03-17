@@ -87,7 +87,21 @@ module.exports = function(grunt) {
 				dir: reportDir,
 				root: 'test'
 			}
-		}
+		},
+		complexity: {
+            generic: {
+                src: ['src/**/*.js'],
+                options: {
+                    breakOnErrors: true,
+                    jsLintXML: 'test/complexity/report.xml',			// create XML JSLint-like report
+                    checkstyleXML: 'test/complexity/checkstyle.xml',	// create checkstyle report
+                    errorsOnly: false,									// show only maintainability errors
+                    cyclomatic: 4,										// or optionally a single value, like 3
+                    halstead: 16,										// or optionally a single value, like 8
+                    maintainability: 100
+                }
+            }
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-istanbul');
@@ -97,9 +111,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-istanbul-coverage');
+	grunt.loadNpmTasks('grunt-complexity');
 
 	grunt.registerTask('test', ['jshint', 'cover']);
-	grunt.registerTask('cover', [ 'clean', 'instrument', 'reloadTasks', 'simplemocha', 'storeCoverage', 'makeReport', 'coverage']);
+	grunt.registerTask('cover', [ 'clean', 'instrument', 'reloadTasks', 'simplemocha', 'storeCoverage', 'makeReport', 'coverage', 'complexity']);
 
 	grunt.registerTask('default', ['test']);
 };
