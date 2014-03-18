@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "symphony-fnassert": "~0.1.0",
-    "grunt-complexity": "~0.1.4",
-    "lodash": "~2.4.1",
-    "coveralls": "~2.10.0"
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
+    "coveralls": "~2.10.0",
+    "grunt-complexity": "~0.1.4",
     "grunt": "~0.4.1",
     "grunt-istanbul": "~0.2.3",
     "grunt-contrib-jshint": "~0.6.4",
