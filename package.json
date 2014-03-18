@@ -1,6 +1,6 @@
 {
   "name": "symphony-fnannotate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Function annotation from angular.js",
   "main": "./src/main.js",
   "directories": {
