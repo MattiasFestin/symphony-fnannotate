@@ -30,7 +30,7 @@
   "engineStrict": true,
   "scripts": {
     "test": "grunt test",
-    "coveralls": "cat ./test/report/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat ./test/report/lcov.info | ./node_modules/coveralls/bin/coveralls.js -v"
   },
   "repository": {
     "type": "git",

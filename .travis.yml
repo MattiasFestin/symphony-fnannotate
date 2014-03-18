@@ -10,5 +10,5 @@ matrix:
 before_install: npm install -g grunt-cli
 install: npm install
 after_success:
-    - cat ./test/report/lcov.info
+#    - cat ./test/report/lcov.info
     - npm run coveralls

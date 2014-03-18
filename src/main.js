@@ -46,4 +46,4 @@ module.exports = function annotate(fn) {
 
 	fn.$inject = $inject;
 	return $inject;
-};
+}
