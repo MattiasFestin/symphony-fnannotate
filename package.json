@@ -9,7 +9,8 @@
   "dependencies": {
     "symphony-fnassert": "~0.1.0",
     "grunt-complexity": "~0.1.4",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "coveralls": "~2.10.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -27,7 +28,8 @@
     "grunt-istanbul-coverage": "0.0.2"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "coveralls": "cat ./test/report/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
