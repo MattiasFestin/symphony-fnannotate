@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	var dateFormat = require('dateformat');
 	var reportDir = 'report/';
 	var tasks = 'test/specs/**/*_test.js';
 	//var tests = 'test/specs/**/*.js';
@@ -69,7 +68,7 @@ module.exports = function(grunt) {
 		},
 
 		makeReport : {
-			src : 'test/report/**/*.json',
+			src : 'test/report/*.json',
 			options : {
 				type : 'lcov',
 				dir : 'test/' + reportDir,
